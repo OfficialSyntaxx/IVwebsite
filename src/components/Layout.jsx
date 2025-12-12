@@ -75,6 +75,9 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                                     <NavLink to="/hall-of-legends" className={({ isActive }) => `px-4 py-3 hover:bg-slate-800 text-left transition-colors flex items-center justify-between group/item ${isActive ? 'text-cyan-400' : 'text-slate-400 hover:text-white'}`}>
                                         Hall of Legends <span className="opacity-0 group-hover/item:opacity-100 transition-opacity text-yellow-500">♛</span>
                                     </NavLink>
+                                    <NavLink to="/staff-application" className={({ isActive }) => `px-4 py-3 hover:bg-slate-800 text-left transition-colors flex items-center justify-between group/item ${isActive ? 'text-cyan-400' : 'text-slate-400 hover:text-white'}`}>
+                                        Staff Application <span className="opacity-0 group-hover/item:opacity-100 transition-opacity text-green-500">→</span>
+                                    </NavLink>
                                     <div className="h-px bg-slate-800 my-1 mx-2"></div>
                                     <a href="https://discord.gg/ironveil" target="_blank" rel="noreferrer" className="px-4 py-3 hover:bg-[#5865F2]/20 text-left transition-colors text-slate-400 hover:text-[#5865F2] flex items-center justify-between group/item">
                                         Discord <span className="opacity-0 group-hover/item:opacity-100 transition-opacity">↗</span>

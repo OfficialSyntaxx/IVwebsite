@@ -41,12 +41,16 @@ const DevBlogPost = () => {
                         {post.title}
                     </h1>
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
-                            <User size={20} className="text-slate-400" />
+                        <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 overflow-hidden">
+                            {post.authorImage ? (
+                                <img src={post.authorImage} alt={post.author} className="w-full h-full object-contain bg-slate-950" />
+                            ) : (
+                                <User size={20} className="text-slate-400" />
+                            )}
                         </div>
                         <div>
-                            <div className="text-white font-bold text-sm">IronVeil Team</div>
-                            <div className="text-slate-500 text-xs">Developer</div>
+                            <div className="text-white font-bold text-sm">{post.author || "IronVeil Team"}</div>
+                            <div className="text-slate-500 text-xs">{post.role || "Developer"}</div>
                         </div>
                     </div>
                 </header>

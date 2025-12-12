@@ -3,6 +3,9 @@ export const BLOG_POSTS = [
         id: 'update-12-11',
         title: "Staff Application System Live",
         date: "2025-12-11",
+        author: "Syntaxx",
+        role: "Co owner & Wizard",
+        authorImage: "https://oldschool.runescape.wiki/images/Wise_Old_Man.png",
         excerpt: "We've overhauled the staff application process with a new integrated form and local storage backend.",
         content: `
 # Staff Applications Now Open
@@ -23,6 +26,9 @@ Navigate to the "Community" tab and select "Apply for Staff". Good luck!
         id: 'update-12-08',
         title: "Wilderness Events & Hotspots",
         date: "2025-12-08",
+        author: "Cranked",
+        role: "Owner & Mastermind",
+        authorImage: "https://oldschool.runescape.wiki/images/Vannaka.png",
         excerpt: "New hourly events in the Wilderness to heat up the action. Get ready for blood!",
         content: `
 # Wilderness Flash Events
@@ -42,6 +48,9 @@ Check the "Network" tab to see active events!
         id: 'update-12-05',
         title: "Raids 2: Theatre of Blood",
         date: "2025-12-05",
+        author: "Cranked",
+        role: "Owner & Mastermind",
+        authorImage: "https://oldschool.runescape.wiki/images/Vannaka.png",
         excerpt: "Enter the theatre. Face Verzik Vitur. Claim your glory.",
         content: `
 # Theatre of Blood Released
@@ -64,6 +73,9 @@ Good luck, adventurers. You'll need it.
         id: 'update-12-01',
         title: "Winter Update: The Foundation",
         date: "2025-12-01",
+        author: "Syntaxx",
+        role: "Co owner & Wizard",
+        authorImage: "https://oldschool.runescape.wiki/images/Wise_Old_Man.png",
         excerpt: "Laying the groundwork for the future of IronVeil. Stability fixes and core improvements.",
         content: `
 # The Foundation Update

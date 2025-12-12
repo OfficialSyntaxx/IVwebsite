@@ -140,7 +140,11 @@ const Wiki = () => {
                                 return (
                                     <div key={style} className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-xl overflow-hidden flex flex-col">
                                         <div className="p-6 border-b border-slate-800 bg-black/20 flex items-center gap-3">
-                                            <StyleIcon className={data.color} size={24} />
+                                            {typeof StyleIcon === 'string' ? (
+                                                <img src={StyleIcon} alt={style} className="w-6 h-6 object-contain" />
+                                            ) : (
+                                                <StyleIcon className={data.color} size={24} />
+                                            )}
                                             <h2 className="text-2xl font-bold text-white uppercase tracking-wider">{style}</h2>
                                         </div>
                                         <div className="p-6 space-y-8 flex-1">

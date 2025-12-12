@@ -61,7 +61,17 @@ const DevBlog = () => {
                             <div className="mt-auto flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
                                 <div className="flex items-center gap-4">
                                     <span className="flex items-center gap-1"><Calendar size={12} /> {post.date}</span>
-                                    <span className="flex items-center gap-1"><User size={12} /> IronVeil Team</span>
+                                    <span className="flex items-center gap-2">
+                                        {post.authorImage ? (
+                                            <img src={post.authorImage} alt={post.author} className="w-5 h-5 rounded-full object-contain bg-slate-950 border border-slate-700" />
+                                        ) : (
+                                            <User size={12} />
+                                        )}
+                                        <span className="flex items-center gap-1">
+                                            {post.author || "IronVeil Team"}
+                                            {post.role && <span className="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-400">{post.role}</span>}
+                                        </span>
+                                    </span>
                                 </div>
                                 <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform text-cyan-500" />
                             </div>

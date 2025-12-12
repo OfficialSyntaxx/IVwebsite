@@ -41,7 +41,7 @@ export const CUSTOM_CONTENT = [
 
 export const GEAR_PROGRESSION = {
     MELEE: {
-        icon: Sword,
+        icon: "https://oldschool.runescape.wiki/images/Attack_icon.png",
         color: 'text-red-500',
         tiers: [
             {
@@ -79,7 +79,7 @@ export const GEAR_PROGRESSION = {
         ]
     },
     RANGED: {
-        icon: Anchor,
+        icon: "https://oldschool.runescape.wiki/images/Ranged_icon.png",
         color: 'text-green-500',
         tiers: [
             {
@@ -113,7 +113,7 @@ export const GEAR_PROGRESSION = {
         ]
     },
     MAGIC: {
-        icon: Zap,
+        icon: "https://oldschool.runescape.wiki/images/Magic_icon.png",
         color: 'text-blue-500',
         tiers: [
             {
