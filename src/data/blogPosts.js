@@ -1,74 +1,82 @@
-
-import { Zap, Trophy, Newspaper, Sword, Shield, Map as MapIcon } from 'lucide-react';
-
 export const BLOG_POSTS = [
     {
-        slug: 'raids-4-announcement',
-        title: "Dev Blog: Raids 4 - The Void's Edge",
-        date: "December 10, 2025",
-        author: "Cranked",
-        tag: "Development",
-        icon: Sword,
-        summary: "A first look at our most ambitious raid yet. Explore the depths of the Void and face ancient horrors.",
+        id: 'update-12-11',
+        title: "Staff Application System Live",
+        date: "2025-12-11",
+        excerpt: "We've overhauled the staff application process with a new integrated form and local storage backend.",
         content: `
-# The Void's Edge
+# Staff Applications Now Open
 
-We are thrilled to announce the development of our fourth raid: **The Void's Edge**. This raid will push your team coordination to the limit.
+We are excited to announce that the new Staff Application system is live! You can now apply directly through the website without needing to join the Discord first.
 
-## What to Expect
-- **5 New Bosses**: Each with unique mechanics that require precise prayer flicking and positioning.
-- **New Rewards**: Including the T95 Void waker and the shadowy "Obsidian" armor set.
-- **Dynamic Difficulty**: The raid scales based on your team size and average combat level.
+## Changes
+- **Integrated Form**: Apply directly on the site.
+- **Secure Backend**: Applications are processed securely and stored for admin review.
+- **Streamlined Process**: No more Google Forms.
 
-## The Lore
-Long before the God Wars, the Void Knights discovered a tear in reality. They built an outpost to monitor it, but silence has fallen. You are being sent in to investigate.
-
-## Release Date
-We are targeting a **Q1 2026** release. Stay tuned for more sneak peeks on our Discord!
-        `
+## How to Apply
+Navigate to the "Community" tab and select "Apply for Staff". Good luck!
+        `,
+        tags: ["Website", "Community"]
     },
     {
-        slug: 'patch-notes-2-0',
-        title: "Patch Notes v2.0: The Economy Update",
-        date: "December 5, 2025",
-        author: "Syntaxx",
-        tag: "Update",
-        icon: Zap,
-        summary: "Major overhaul to the Grand Exchange, drop tables, and a specialized gold sink for high-level players.",
+        id: 'update-12-08',
+        title: "Wilderness Events & Hotspots",
+        date: "2025-12-08",
+        excerpt: "New hourly events in the Wilderness to heat up the action. Get ready for blood!",
         content: `
-# Economy Overhaul
+# Wilderness Flash Events
 
-This update focuses on long-term economic health. We've introduced several tax brackets for the Grand Exchange and rebalanced drop tables for Zulrah and Vorkath.
+The Wilderness just got deadlier. We've introduced a new system of rotating hotspots and flash events.
 
-## Key Changes
-- **Grand Exchange Tax**: Now set at 1% for all transactions over 1M GP.
-- **Item Sinks**: You can now sacrifice duplicate uniques to the "Well of Goodwill" for cosmetic perks (like 1-hour double pet chance).
-- **Vote Shop**: Added new recolors for the Twisted Bow.
+## Features
+- **Hourly Hotspots**: 2x drops and XP in designated zones.
+- **Flash Events**: Sudden boss spawns or loot chest drops.
+- **Bounty Hunter**: Target system improvements.
 
-## Bug Fixes
-- Fixed an issue where the Slayer Helmet (i) was not applying the 15% damage boost on tasks.
-- Fixed a pathing glich at the Mage Bank.
-        `
+Check the "Network" tab to see active events!
+        `,
+        tags: ["Update", "PvP"]
     },
     {
-        slug: 'clan-cup-finals',
-        title: "Clan Cup: Finals Recap",
-        date: "November 28, 2025",
-        author: "Mod Ash",
-        tag: "Event",
-        icon: Trophy,
-        summary: "Congratulations to 'Solo Mission' for taking the crown in this year's 5v5 Tournament!",
+        id: 'update-12-05',
+        title: "Raids 2: Theatre of Blood",
+        date: "2025-12-05",
+        excerpt: "Enter the theatre. Face Verzik Vitur. Claim your glory.",
         content: `
-# Clan Cup Champions
+# Theatre of Blood Released
 
-What a tournament! After 3 weekends of intense PvP action, **Solo Mission** has defeated **RoT** in the grand finals.
+The sanguinary challenges of the Theatre of Blood await. Gather your team and face the toughest challenge in Gielinor.
 
-## The Highlights
-- **MVP**: _DitterBitter_ for an insane 1v3 clutch in the semi-finals.
-- **Prize Pool**: The winning team split a massive 10B GP prize pool and received the exclusive "Golden Scimitar" cosmetic override.
+## Bosses
+- Maiden of Sugadinti
+- Pestilent Bloat
+- Nylocas Vasilias
+- Sotetseg
+- Xarpus
+- Verzik Vitur
 
-## Next Season
-Sign-ups for the Winter Season begin next week. Get your squad ready!
-        `
+Good luck, adventurers. You'll need it.
+        `,
+        tags: ["Update", "PvM"]
+    },
+    {
+        id: 'update-12-01',
+        title: "Winter Update: The Foundation",
+        date: "2025-12-01",
+        excerpt: "Laying the groundwork for the future of IronVeil. Stability fixes and core improvements.",
+        content: `
+# The Foundation Update
+
+This update focuses on stability, server performance, and laying the groundwork for future content like Raids and Wilderness events.
+
+## Patch Notes
+- **Server**: Optimized tick processing for smoother gameplay.
+- **Client**: Fixed rendering issues on high-DPI screens.
+- **Gameplay**: Adjusted drop tables for Slayer monsters.
+
+Stay tuned for more updates throughout December!
+        `,
+        tags: ["System", "Patch"]
     }
 ];

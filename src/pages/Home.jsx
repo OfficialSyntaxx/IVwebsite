@@ -21,20 +21,19 @@ const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote 
     return (
         <>
             <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* RESTORED COMMUNITY SECTION - Overlapping Parallax */}
+                {/* UNIQUE FEATURES SECTION - Overlapping Parallax */}
                 <div className="absolute bottom-12 left-0 right-0 z-20 container mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                         {[
-                            { title: "Patch Notes v2.0", date: "Just Now", tag: "Update", icon: Zap },
-                            { title: "Clan Cup: Finals", date: "Yesterday", tag: "Event", icon: Trophy },
-                            { title: "Dev Blog: Raids 4", date: "Last Week", tag: "Blog", icon: Newspaper }
+                            { title: "Ironman Mode", desc: "Stand alone. Full GIM support.", icon: Shield },
+                            { title: "Raids 1 & 2", desc: "Full CoX and ToB implementation.", icon: Trophy },
+                            { title: "Wilderness Events", desc: "Hourly hotspots & flash events.", icon: MapIcon }
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                onClick={() => setSelectedPatchNote(item)}
                                 className="
                         bg-slate-900/40 backdrop-blur-md border border-slate-700/30 p-6 rounded-lg
-                        hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all duration-500 group cursor-pointer
+                        hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all duration-500 group
                         shadow-lg hover:shadow-cyan-500/20 hover:-translate-y-4
                         "
                                 style={{ animation: `float ${4 + i}s ease-in-out infinite` }}
@@ -43,13 +42,9 @@ const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote 
                                     <div className="p-3 bg-slate-800/80 rounded-lg text-cyan-400 group-hover:scale-110 transition-transform shadow-inner">
                                         <item.icon size={24} />
                                     </div>
-                                    <span className="text-xs font-mono text-slate-400 bg-black/30 px-2 py-1 rounded">{item.date}</span>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{item.title}</h3>
-                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 group-hover:text-cyan-500 transition-colors">
-                                    <span>Read More</span>
-                                    <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
-                                </div>
+                                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -78,8 +73,8 @@ const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote 
                         <div>
                             <SectionTitle subtitle>The Portal System</SectionTitle>
                             <div className="space-y-6">
-                                <FeatureItem icon={Users} title="Live Social Hub" desc="See where your clan is operating in real-time. Our WebSocket layer provides instant updates on Wilderness hotspots." />
-                                <FeatureItem icon={Shield} title="Dynamic Armory" desc="Inspect any player, verify drops, and flex your gear. Syncs directly with the game server cache." />
+                                <FeatureItem icon={Users} title="Hall of Legends" desc="Immortalize your legacy. Compete for the top spot in PvP, Skilling, and Bossing leaderboards." />
+                                <FeatureItem icon={Shield} title="The Pulse" desc="Live server events ticker. Track wilderness hotspots, global drops, and boss spawns in real-time." />
                                 <FeatureItem icon={MapIcon} title="Boss Telemetry" desc="Never miss a spawn. Track Galvek, Zulrah, and World Boss HP bars directly from your second monitor." />
                             </div>
                         </div>

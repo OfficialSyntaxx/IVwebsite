@@ -1,12 +1,40 @@
 
 
 
-import { Sword, Shield, Zap, Hammer, Anchor, Flame, Scroll } from 'lucide-react';
+import { Sword, Shield, Zap, Hammer, Anchor, Flame, Scroll, Crown } from 'lucide-react';
 
 export const WIKI_TABS = [
     { id: 'general', label: 'General Guide', icon: Scroll },
+    { id: 'custom', label: 'Custom Content', icon: Crown },
     { id: 'gear', label: 'Gear Progression', icon: Shield },
     { id: 'skilling', label: 'Skilling Hotspots', icon: Hammer },
+];
+
+export const CUSTOM_CONTENT = [
+    {
+        title: "Member Zones",
+        desc: "Exclusive areas for Premium, Respected, Legendary, and Uber members. Features boosted skilling rates and private boss instances.",
+        rewards: ["XP Boosts", "Private Bosses", "Priority Banking"],
+        difficulty: "Varies",
+        color: "text-yellow-500",
+        border: "border-yellow-500/30"
+    },
+    {
+        title: "High-Tier Bossing",
+        desc: "Challenge the most powerful foes including Vorkath, Zulrah, and the Alchemical Hydra. Complete logs for exclusive rewards.",
+        rewards: ["Vorkath's Head", "Toxic Blowpipe", "Hydra's Claw"],
+        difficulty: "Hard",
+        color: "text-red-500",
+        border: "border-red-500/30"
+    },
+    {
+        title: "Wilderness Events",
+        desc: "Compete for resources in the wilderness. Watch out for global events involving Skotizo and wilderness bosses.",
+        rewards: ["PvP Weapons", "Loot Keys", "Emblems"],
+        difficulty: "Extreme",
+        color: "text-purple-500",
+        border: "border-purple-500/30"
+    }
 ];
 
 

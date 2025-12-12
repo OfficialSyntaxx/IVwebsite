@@ -11,12 +11,18 @@ import MeetTheTeam from './pages/MeetTheTeam';
 import DevBlog from './pages/DevBlog';
 import DevBlogPost from './pages/DevBlogPost';
 import StaffApplication from './pages/StaffApplication';
+import HallOfLegends from './pages/HallOfLegends';
 
+// Component Imports
 // Component Imports
 import Layout from './components/Layout';
 import LiveHUD from './components/LiveHUD';
 import ParallaxBackground from './components/ParallaxBackground';
+import ScrollToTop from './components/ScrollToTop';
 import { StoreModal, CollectionLogModal, WorldMapOverlay, PatchNoteModal, RulesModal } from './components/Modals';
+
+// Local Data
+import LOCAL_COLLECTION_LOG from './data/collectionLog.json';
 
 export default function App() {
     // === GLOBAL STATE ===
@@ -28,10 +34,7 @@ export default function App() {
     const [selectedPatchNote, setSelectedPatchNote] = useState(null);
 
     // Dynamic Data
-    const [collectionLogData, setCollectionLogData] = useState(() => {
-        const saved = localStorage.getItem('collectionLog');
-        return saved ? JSON.parse(saved) : {};
-    });
+    const [collectionLogData, setCollectionLogData] = useState(LOCAL_COLLECTION_LOG);
 
     const [worldData, setWorldData] = useState(() => {
         const saved = localStorage.getItem('worldEvents');
@@ -96,26 +99,15 @@ export default function App() {
             setUptimeMs(prev => prev + 1000);
         }, 1000);
 
-        // Fetch Collection Log
-        fetch("http://localhost:3001/collection-log")
-            .then(res => res.json())
-            .then(data => {
-                setCollectionLogData(data);
-                localStorage.setItem('collectionLog', JSON.stringify(data));
-            })
-            .catch(err => console.warn("Using cached collection log", err));
-
         return () => {
             clearInterval(interval);
             clearInterval(uptimeInterval);
         };
     }, []);
 
-    // Custom Route Wrapper to Handle Patch Note Modals which act like navigation but are state
-    // Actually, we'll just handle it globally.
-
     return (
         <Router>
+            <ScrollToTop />
             <div className="min-h-screen bg-[#050505] text-slate-200 font-sans selection:bg-cyan-500/30">
                 <style>{`
                   @keyframes gradient-x {
@@ -185,6 +177,7 @@ export default function App() {
                             <Route path="/blog" element={<DevBlog />} />
                             <Route path="/blog/:slug" element={<DevBlogPost />} />
                             <Route path="/staff-application" element={<StaffApplication />} />
+                            <Route path="/hall-of-legends" element={<HallOfLegends />} />
                         </Route>
                     </Routes>
                 </div>

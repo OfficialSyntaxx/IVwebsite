@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Scroll, Terminal, Map as MapIcon, HelpCircle, Sword, ChevronRight } from 'lucide-react';
-import { WIKI_TABS, GEAR_PROGRESSION, SKILLING_HOTSPOTS } from '../data/wikiData';
+import { Scroll, Terminal, Map as MapIcon, HelpCircle, Sword, ChevronRight, Crown } from 'lucide-react';
+import { WIKI_TABS, GEAR_PROGRESSION, SKILLING_HOTSPOTS, CUSTOM_CONTENT } from '../data/wikiData';
 
 const Wiki = () => {
     const [activeTab, setActiveTab] = useState('general');
@@ -48,9 +48,9 @@ const Wiki = () => {
                                 <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
                                     <p>Welcome to IronVeil. Your journey begins at <strong className="text-white">Edgeville</strong>, the central hub for all activities.</p>
                                     <ul className="list-disc pl-6 space-y-3">
-                                        <li><strong className="text-cyan-400">Ironman Modes:</strong> Choose between Standard, Hardcore, Group, or Ultimate Ironman upon login.</li>
-                                        <li><strong className="text-cyan-400">Experience Rates:</strong> Select your XP rate multiplier. Lower rates grant higher drop rate bonuses!</li>
-                                        <li><strong className="text-cyan-400">Starter Pack:</strong> Claim your starter gear from the Guide at home.</li>
+                                        <li><strong className="text-cyan-400">Custom XP Rates:</strong> Select up to 100x XP rates or choose 1x for maximum drop rate bonuses!</li>
+                                        <li><strong className="text-cyan-400">Starter Pack:</strong> Begin your journey with a combat starter pack.</li>
+                                        <li><strong className="text-cyan-400">Ironman Modes:</strong> Full Group Ironman support with shared banks and storage.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -101,6 +101,33 @@ const Wiki = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    )}
+
+                    {/* === CUSTOM CONTENT === */}
+                    {activeTab === 'custom' && (
+                        <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+                            {CUSTOM_CONTENT.map((item, idx) => (
+                                <div key={idx} className={`bg-slate-900/80 backdrop-blur border ${item.border} rounded-xl p-8 shadow-xl hover:-translate-y-1 transition-transform duration-300`}>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h2 className={`text-3xl font-bold ${item.color}`}>{item.title}</h2>
+                                        <span className="px-3 py-1 bg-slate-950 rounded text-xs font-bold uppercase tracking-widest text-slate-400 border border-slate-800">
+                                            {item.difficulty}
+                                        </span>
+                                    </div>
+                                    <p className="text-slate-300 text-lg leading-relaxed mb-6">{item.desc}</p>
+                                    <div>
+                                        <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-2">Key Rewards</h3>
+                                        <div className="flex flex-wrap gap-2">
+                                            {item.rewards.map((reward, rIdx) => (
+                                                <span key={rIdx} className="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-xs font-bold border border-cyan-500/20">
+                                                    {reward}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     )}
 

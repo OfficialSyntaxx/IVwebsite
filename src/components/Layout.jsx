@@ -46,7 +46,6 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                         >
                             <div className="relative">
                                 <Activity size={16} />
-                                <span className={`absolute -top-1 -right-1 w-2 h-2 rounded-full ${worldData.meta.status === "ONLINE" ? "bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]" : "bg-red-500"}`}></span>
                             </div>
                             Network
                             <span className={`absolute -bottom-1 left-0 h-0.5 bg-cyan-500 transition-all group-hover:w-full ${hudOpen ? 'w-full' : 'w-0'}`}></span>
@@ -72,6 +71,9 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                                     </NavLink>
                                     <NavLink to="/team" className={({ isActive }) => `px-4 py-3 hover:bg-slate-800 text-left transition-colors flex items-center justify-between group/item ${isActive ? 'text-cyan-400' : 'text-slate-400 hover:text-white'}`}>
                                         Team <span className="opacity-0 group-hover/item:opacity-100 transition-opacity text-cyan-500">→</span>
+                                    </NavLink>
+                                    <NavLink to="/hall-of-legends" className={({ isActive }) => `px-4 py-3 hover:bg-slate-800 text-left transition-colors flex items-center justify-between group/item ${isActive ? 'text-cyan-400' : 'text-slate-400 hover:text-white'}`}>
+                                        Hall of Legends <span className="opacity-0 group-hover/item:opacity-100 transition-opacity text-yellow-500">♛</span>
                                     </NavLink>
                                     <div className="h-px bg-slate-800 my-1 mx-2"></div>
                                     <a href="https://discord.gg/ironveil" target="_blank" rel="noreferrer" className="px-4 py-3 hover:bg-[#5865F2]/20 text-left transition-colors text-slate-400 hover:text-[#5865F2] flex items-center justify-between group/item">
@@ -105,6 +107,7 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                         <NavLink to="/wiki" className="text-slate-300 font-bold uppercase tracking-wider py-2">Wiki</NavLink>
                         <NavLink to="/blog" className="text-slate-300 font-bold uppercase tracking-wider py-2">Blog</NavLink>
                         <NavLink to="/team" className="text-slate-300 font-bold uppercase tracking-wider py-2">Team</NavLink>
+                        <NavLink to="/hall-of-legends" className="text-yellow-500 font-bold uppercase tracking-wider py-2">Hall of Legends</NavLink>
                         <a href="https://discord.gg/ironveil" className="text-slate-300 font-bold uppercase tracking-wider py-2">Discord</a>
 
                         <div className="h-px bg-slate-800 w-1/2 mx-auto my-2"></div>
@@ -132,8 +135,10 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Community</h4>
                             <ul className="space-y-2 text-slate-400 text-sm">
                                 <li><NavLink to="/team" className="hover:text-cyan-400">Meet the Team</NavLink></li>
-                                <li><a href="#" className="hover:text-cyan-400">Discord</a></li>
+                                <li><a href="https://discord.gg/ironveil" className="hover:text-cyan-400">Discord</a></li>
                                 <li><NavLink to="/wiki" className="hover:text-cyan-400">Wiki</NavLink></li>
+                                <li><NavLink to="/blog" className="hover:text-cyan-400">Dev Blog</NavLink></li>
+                                <li><NavLink to="/hall-of-legends" className="hover:text-yellow-500">Hall of Legends</NavLink></li>
                             </ul>
                         </div>
                         <div>

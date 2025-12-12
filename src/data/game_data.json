@@ -578,5 +578,40 @@
     "wiki_url": "https://oldschool.runescape.wiki/w/Imbued_heart",
     "icon_url": "https://oldschool.runescape.wiki/images/Imbued_heart_detail.png",
     "stats": null
+  },
+  "Void seal(8)": {
+    "id": 11666,
+    "name": "Void seal(8)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Void_seal(8).png"
+  },
+  "Ganodermic Runt": {
+    "id": 32100,
+    "name": "Ganodermic Runt",
+    "icon_url": "https://runescape.wiki/images/Ganodermic_runt.png"
+  },
+  "Polypore staff (deg)": {
+    "id": 32040,
+    "name": "Polypore staff (deg)",
+    "icon_url": "https://runescape.wiki/images/thumb/Polypore_staff.png/150px-Polypore_staff.png"
+  },
+  "Korasi's sword": {
+    "id": 32001,
+    "name": "Korasi's sword",
+    "icon_url": "https://runescape.wiki/images/thumb/Korasi%27s_sword.png/150px-Korasi%27s_sword.png"
+  },
+  "Polypore spores": {
+    "id": 32038,
+    "name": "Polypore spores",
+    "icon_url": "https://runescape.wiki/images/Polypore_spore.png"
+  },
+  "Ancient eye": {
+    "id": 32002,
+    "name": "Ancient eye",
+    "icon_url": "https://runescape.wiki/images/Ancient_eye.png"
+  },
+  "Lava whip": {
+    "id": 32064,
+    "name": "Lava whip",
+    "icon_url": "https://oldschool.runescape.wiki/images/Abyssal_whip_(volcanic)_detail.png"
   }
 }

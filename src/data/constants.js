@@ -8,9 +8,12 @@ export const MOCK_WORLD_STATE = {
         wildyActivityLevel: "HIGH"
     },
     events: [
-        { id: 1, name: "Galvek", status: "ALIVE", hpPercent: 45, location: "Myth's Guild", attackers: 12 },
-        { id: 2, name: "Wildy Wyrm", status: "DEAD", respawnTimer: "14:20", location: "Wilderness Lvl 45", attackers: 0 },
-        { id: 3, name: "Tekton", status: "ALIVE", hpPercent: 88, location: "Raids Lobby", attackers: 4 }
+        { id: 1, name: "Wilderness Flash Event", status: "ALIVE", hpPercent: 100, location: "Dark Warriors' Fortress", attackers: 24, active: true },
+        { id: 2, name: "Shooting Star", status: "ALIVE", hpPercent: 45, location: "Catherby", attackers: 8, active: true },
+        { id: 3, name: "Xamphur", status: "DEAD", respawnTimer: "24:00", location: "Kourend", attackers: 0, nextSpawnMs: 1440000, active: false },
+        { id: 4, name: "Charity Well", status: "ACTIVE", location: "Edgeville", active: true, statusText: "ACTIVE" },
+        { id: 5, name: "Chambers of Xeric", status: "ALIVE", location: "Mt. Quidamortem", active: true },
+        { id: 6, name: "Vote Bonus", status: "ACTIVE", location: "Global", active: true, statusText: "ACTIVE" }
     ],
     hotspots: [
         { id: 1, region: "Revenant Caves", intensity: "EXTREME", x: 69.26, y: 24.37, desc: "Multi-combat active" },
