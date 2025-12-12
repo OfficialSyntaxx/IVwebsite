@@ -1,0 +1,582 @@
+{
+  "Torva full helm": {
+    "id": 26409,
+    "name": "Torva full helm",
+    "examine": "An ancient warrior's full helm.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_full_helm#Restored",
+    "icon_url": "https://oldschool.runescape.wiki/images/Torva_full_helm_detail.png",
+    "stats": null
+  },
+  "Torva platebody": {
+    "id": 26410,
+    "name": "Torva platebody",
+    "examine": "An ancient warrior's platebody.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_platebody#Restored",
+    "icon_url": "https://oldschool.runescape.wiki/images/Torva_platebody_detail.png",
+    "stats": null
+  },
+  "Torva platelegs": {
+    "id": 26411,
+    "name": "Torva platelegs",
+    "examine": "An ancient warrior's platelegs.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_platelegs#Restored",
+    "icon_url": "https://oldschool.runescape.wiki/images/Torva_platelegs_detail.png",
+    "stats": null
+  },
+  "Scythe of vitur": {
+    "id": 22664,
+    "name": "Scythe of vitur",
+    "examine": "A powerful scythe.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Scythe_of_vitur_(RuneFest_2018)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Scythe_of_vitur_detail.png",
+    "stats": null
+  },
+  "Avernic defender": {
+    "id": 22476,
+    "name": "Avernic defender",
+    "examine": "A defensive weapon.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Avernic_defender#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Avernic_defender_detail.png",
+    "stats": null
+  },
+  "Primordial boots": {
+    "id": 14027,
+    "name": "Primordial boots",
+    "examine": "A pair of upgraded dragon boots.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Primordial_boots",
+    "icon_url": "https://oldschool.runescape.wiki/images/Primordial_boots_detail.png",
+    "stats": null
+  },
+  "Ferocious gloves": {
+    "id": 22982,
+    "name": "Ferocious gloves",
+    "examine": "A pair of very very nice gloves.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ferocious_gloves",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ferocious_gloves_detail.png",
+    "stats": null
+  },
+  "Amulet of torture": {
+    "id": 19555,
+    "name": "Amulet of torture",
+    "examine": "A deep sense of torture burns within this powerful amulet.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_torture",
+    "icon_url": "https://oldschool.runescape.wiki/images/Amulet_of_torture_detail.png",
+    "stats": null
+  },
+  "Infernal cape": {
+    "id": 23623,
+    "name": "Infernal cape",
+    "examine": "Whose idea was it to have a cape made of lava anyway?",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Infernal_cape_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Infernal_cape_detail.png",
+    "stats": null
+  },
+  "Twisted bow": {
+    "id": 20999,
+    "name": "Twisted bow",
+    "examine": "A mystical bow carved from the twisted remains of the Great Olm.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Twisted_bow",
+    "icon_url": "https://oldschool.runescape.wiki/images/Twisted_bow_detail.png",
+    "stats": null
+  },
+  "Dragonfire ward": {
+    "id": 22005,
+    "name": "Dragonfire ward",
+    "examine": "A light shield with a haunting, skeletal visage.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragonfire_ward#Uncharged",
+    "icon_url": "https://oldschool.runescape.wiki/images/Dragonfire_ward_detail.png",
+    "stats": null
+  },
+  "Pegasian boots": {
+    "id": 14026,
+    "name": "Pegasian boots",
+    "examine": "A pair of upgraded ranger boots.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pegasian_boots",
+    "icon_url": "https://oldschool.runescape.wiki/images/Pegasian_boots_detail.png",
+    "stats": null
+  },
+  "Zaryte vambraces": {
+    "id": 26403,
+    "name": "Zaryte vambraces",
+    "examine": "A pair of ancient vambraces.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zaryte_vambraces",
+    "icon_url": "https://oldschool.runescape.wiki/images/Zaryte_vambraces_detail.png",
+    "stats": null
+  },
+  "Necklace of anguish": {
+    "id": 19549,
+    "name": "Necklace of anguish",
+    "examine": "A deep sense of anguish burns within this powerful necklace.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Necklace_of_anguish",
+    "icon_url": "https://oldschool.runescape.wiki/images/Necklace_of_anguish_detail.png",
+    "stats": null
+  },
+  "Ava's assembler": {
+    "id": 22110,
+    "name": "Ava's assembler",
+    "examine": "A superior bagged chicken empowered by Vorkath, ready to serve you, magnet in claw.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ava's_assembler#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ava's_assembler_detail.png",
+    "stats": null
+  },
+  "Dragon arrow": {
+    "id": 20389,
+    "name": "Dragon arrow",
+    "examine": "An arrow made using a dragon's talon.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_arrow_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Dragon_arrow_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 0,
+      "attack_ranged": 0,
+      "defence_stab": 0,
+      "defence_slash": 0,
+      "defence_crush": 0,
+      "defence_magic": 0,
+      "defence_ranged": 0,
+      "melee_strength": 0,
+      "ranged_strength": 60,
+      "magic_damage": 0,
+      "prayer": 0,
+      "slot": "ammo",
+      "requirements": {
+        "ranged": 60
+      }
+    }
+  },
+  "Ancestral hat": {
+    "id": 25518,
+    "name": "Ancestral hat",
+    "examine": "The hat of a powerful sorceress from a bygone era.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_hat_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ancestral_hat_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 8,
+      "attack_ranged": -2,
+      "defence_stab": 12,
+      "defence_slash": 11,
+      "defence_crush": 13,
+      "defence_magic": 5,
+      "defence_ranged": 0,
+      "melee_strength": 0,
+      "ranged_strength": 0,
+      "magic_damage": 2,
+      "prayer": 0,
+      "slot": "head",
+      "requirements": null
+    }
+  },
+  "Ancestral robe top": {
+    "id": 21023,
+    "name": "Ancestral robe top",
+    "examine": "The robe top of a powerful sorceress from a bygone era.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_robe_top",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ancestral_robe_top_detail.png",
+    "stats": null
+  },
+  "Ancestral robe bottom": {
+    "id": 21026,
+    "name": "Ancestral robe bottom",
+    "examine": "The robe bottoms of a powerful sorceress from a bygone era.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_robe_bottom",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ancestral_robe_bottom_detail.png",
+    "stats": null
+  },
+  "Eternal boots": {
+    "id": 23645,
+    "name": "Eternal boots",
+    "examine": "A pair of upgraded infinity boots.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Eternal_boots_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Eternal_boots_detail.png",
+    "stats": null
+  },
+  "Tormented bracelet": {
+    "id": 19546,
+    "name": "Tormented bracelet",
+    "examine": "A deep sense of torment burns within this powerful bracelet.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Tormented_bracelet",
+    "icon_url": "https://oldschool.runescape.wiki/images/Tormented_bracelet_detail.png",
+    "stats": null
+  },
+  "Occult necklace": {
+    "id": 23654,
+    "name": "Occult necklace",
+    "examine": "A smokey evil embodies this amulet.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Occult_necklace_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Occult_necklace_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 12,
+      "attack_ranged": 0,
+      "defence_stab": 0,
+      "defence_slash": 0,
+      "defence_crush": 0,
+      "defence_magic": 0,
+      "defence_ranged": 0,
+      "melee_strength": 0,
+      "ranged_strength": 0,
+      "magic_damage": 10,
+      "prayer": 2,
+      "slot": "neck",
+      "requirements": {
+        "magic": 75
+      }
+    }
+  },
+  "Imbued guthix cape": {
+    "id": 23604,
+    "name": "Imbued guthix cape",
+    "examine": "A cape from the almighty god Guthix, imbued with great power.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Imbued_guthix_cape_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Imbued_guthix_cape_detail.png",
+    "stats": null
+  },
+  "Neitiznot faceguard": {
+    "id": 24272,
+    "name": "Neitiznot faceguard",
+    "examine": "A gift from Neitiznot's Burgher enhanced with the jaw of a Basilisk.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Neitiznot_faceguard",
+    "icon_url": "https://oldschool.runescape.wiki/images/Neitiznot_faceguard_detail.png",
+    "stats": null
+  },
+  "Ahrim's robetop": {
+    "id": 20598,
+    "name": "Ahrim's robetop",
+    "examine": "Ahrim the Blighted's armoured robe top.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim's_robetop_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ahrim's_robetop_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 30,
+      "attack_ranged": -10,
+      "defence_stab": 52,
+      "defence_slash": 37,
+      "defence_crush": 63,
+      "defence_magic": 30,
+      "defence_ranged": 0,
+      "melee_strength": 0,
+      "ranged_strength": 0,
+      "magic_damage": 0,
+      "prayer": 0,
+      "slot": "body",
+      "requirements": {
+        "magic": 70,
+        "defence": 70
+      }
+    }
+  },
+  "Ahrim's robeskirt": {
+    "id": 20599,
+    "name": "Ahrim's robeskirt",
+    "examine": "Ahrim the Blighted's armoured robe skirt.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim's_robeskirt_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ahrim's_robeskirt_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 22,
+      "attack_ranged": -7,
+      "defence_stab": 33,
+      "defence_slash": 30,
+      "defence_crush": 36,
+      "defence_magic": 22,
+      "defence_ranged": 0,
+      "melee_strength": 0,
+      "ranged_strength": 0,
+      "magic_damage": 0,
+      "prayer": 0,
+      "slot": "legs",
+      "requirements": {
+        "magic": 70,
+        "defence": 70
+      }
+    }
+  },
+  "Ancient godsword": {
+    "id": 26402,
+    "name": "Ancient godsword",
+    "examine": "A mysterious, heavy sword.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_godsword",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ancient_godsword_detail.png",
+    "stats": null
+  },
+  "Elysian spirit shield": {
+    "id": 19559,
+    "name": "Elysian spirit shield",
+    "examine": "The remains of an ethereal shield.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Elysian_spirit_shield_(Monkey_Madness_II)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Elysian_spirit_shield_detail.png",
+    "stats": null
+  },
+  "Barrows gloves": {
+    "id": 23594,
+    "name": "Barrows gloves",
+    "examine": "A pair of very nice gloves.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Barrows_gloves_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Barrows_gloves_detail.png",
+    "stats": null
+  },
+  "Amulet of fury": {
+    "id": 23641,
+    "name": "Amulet of fury",
+    "examine": "A very powerful onyx amulet.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_fury_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Amulet_of_fury_detail.png",
+    "stats": null
+  },
+  "Ring of suffering (i)": {
+    "id": 26761,
+    "name": "Ring of suffering (i)",
+    "examine": "An extremely deep sense of suffering burns within this powerful ring.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_suffering_(i)#Uncharged",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ring_of_suffering_(i)_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 0,
+      "attack_magic": 0,
+      "attack_ranged": 0,
+      "defence_stab": 20,
+      "defence_slash": 20,
+      "defence_crush": 20,
+      "defence_magic": 20,
+      "defence_ranged": 20,
+      "melee_strength": 0,
+      "ranged_strength": 0,
+      "magic_damage": 0,
+      "prayer": 4,
+      "slot": "ring",
+      "requirements": null
+    }
+  },
+  "Kodai insignia": {
+    "id": 21045,
+    "name": "Kodai insignia",
+    "examine": "An insignia representing Kodai, Xeric's fearsome wizards.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Kodai_insignia",
+    "icon_url": "https://oldschool.runescape.wiki/images/Kodai_insignia_detail.png",
+    "stats": null
+  },
+  "Elder maul": {
+    "id": 21205,
+    "name": "Elder maul",
+    "examine": "A maul crafted from the component parts of Tekton.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Elder_maul_(Last_Man_Standing)",
+    "icon_url": "https://oldschool.runescape.wiki/images/Elder_maul_detail.png",
+    "stats": {
+      "attack_stab": 0,
+      "attack_slash": 0,
+      "attack_crush": 135,
+      "attack_magic": -4,
+      "attack_ranged": 0,
+      "defence_stab": 0,
+      "defence_slash": 0,
+      "defence_crush": 0,
+      "defence_magic": 0,
+      "defence_ranged": 0,
+      "melee_strength": 147,
+      "ranged_strength": 0,
+      "magic_damage": 0,
+      "prayer": 0,
+      "slot": "2h",
+      "requirements": {
+        "attack": 75,
+        "strength": 75
+      }
+    }
+  },
+  "Dragon claws": {
+    "id": 20848,
+    "name": "Dragon claws",
+    "examine": "A set of fighting claws.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_claws",
+    "icon_url": "https://oldschool.runescape.wiki/images/Dragon_claws_detail.png",
+    "stats": null
+  },
+  "Dinh's bulwark": {
+    "id": 21017,
+    "name": "Dinh's bulwark",
+    "examine": "Is it... looking at me?",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dinh's_bulwark",
+    "icon_url": "https://oldschool.runescape.wiki/images/Dinh's_bulwark_detail.png",
+    "stats": null
+  },
+  "Pet snakeling": {
+    "id": 15302,
+    "name": "Pet snakeling",
+    "examine": "A slithering serpent spawn of Zulrah.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pet_snakeling#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Pet_snakeling_detail.png",
+    "stats": null
+  },
+  "Toxic blowpipe": {
+    "id": 15315,
+    "name": "Toxic blowpipe",
+    "examine": "Fires darts while coating them with venom.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Toxic_blowpipe#Charged",
+    "icon_url": "https://oldschool.runescape.wiki/images/Toxic_blowpipe_detail.png",
+    "stats": null
+  },
+  "Magic fang": {
+    "id": 15322,
+    "name": "Magic fang",
+    "examine": "This can be attached to a Staff of the Dead or a Trident of the Seas.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Magic_fang",
+    "icon_url": "https://oldschool.runescape.wiki/images/Magic_fang_detail.png",
+    "stats": null
+  },
+  "Serpentine visage": {
+    "id": 15316,
+    "name": "Serpentine visage",
+    "examine": "Maybe you could use a chisel to craft this into a helmet.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Serpentine_visage",
+    "icon_url": "https://oldschool.runescape.wiki/images/Serpentine_visage_detail.png",
+    "stats": null
+  },
+  "Tanzanite fang": {
+    "id": 15314,
+    "name": "Tanzanite fang",
+    "examine": "Maybe you could use a chisel to fletch this into a blowpipe.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Tanzanite_fang",
+    "icon_url": "https://oldschool.runescape.wiki/images/Tanzanite_fang_detail.png",
+    "stats": null
+  },
+  "Uncut onyx": {
+    "id": 18245,
+    "name": "Uncut onyx",
+    "examine": "This would be worth more cut.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Uncut_onyx",
+    "icon_url": "https://oldschool.runescape.wiki/images/Uncut_onyx_detail.png",
+    "stats": null
+  },
+  "Draconic visage": {
+    "id": 16834,
+    "name": "Draconic visage",
+    "examine": "It looks like this could be attached to a shield somehow.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Draconic_visage",
+    "icon_url": "https://oldschool.runescape.wiki/images/Draconic_visage_detail.png",
+    "stats": null
+  },
+  "Jar of decay": {
+    "id": 22108,
+    "name": "Jar of decay",
+    "examine": "Very healthy.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Jar_of_decay",
+    "icon_url": "https://oldschool.runescape.wiki/images/Jar_of_decay_detail.png",
+    "stats": null
+  },
+  "Bloodhound": {
+    "id": 19731,
+    "name": "Bloodhound",
+    "examine": "Tracking down clues all over the world.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bloodhound",
+    "icon_url": "https://oldschool.runescape.wiki/images/Bloodhound_detail.png",
+    "stats": null
+  },
+  "3rd age pickaxe": {
+    "id": 20016,
+    "name": "3rd age pickaxe",
+    "examine": "A beautifully crafted pickaxe, shaped by ancient smiths.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/3rd_age_pickaxe",
+    "icon_url": "https://oldschool.runescape.wiki/images/3rd_age_pickaxe_detail.png",
+    "stats": null
+  },
+  "3rd age druidic robe top": {
+    "id": 23338,
+    "name": "3rd age druidic robe top",
+    "examine": "A fabulously ancient woven robe top as worn by the druids of old.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/3rd_age_druidic_robe_top",
+    "icon_url": "https://oldschool.runescape.wiki/images/3rd_age_druidic_robe_top_detail.png",
+    "stats": null
+  },
+  "Ring of coins": {
+    "id": 20019,
+    "name": "Ring of coins",
+    "examine": "A valuable ring.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_coins",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ring_of_coins_detail.png",
+    "stats": null
+  },
+  "Mimic": {
+    "id": 23184,
+    "name": "Mimic",
+    "examine": "Oh great, it's a casket that's come to life.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mimic",
+    "icon_url": "https://oldschool.runescape.wiki/images/Mimic_detail.png",
+    "stats": null
+  },
+  "Ranger boots": {
+    "id": 15756,
+    "name": "Ranger boots",
+    "examine": "Lightweight boots ideal for rangers.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ranger_boots",
+    "icon_url": "https://oldschool.runescape.wiki/images/Ranger_boots_detail.png",
+    "stats": null
+  },
+  "Holy sandals": {
+    "id": 16007,
+    "name": "Holy sandals",
+    "examine": "Holy footwear!",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Holy_sandals",
+    "icon_url": "https://oldschool.runescape.wiki/images/Holy_sandals_detail.png",
+    "stats": null
+  },
+  "Void knight top": {
+    "id": 15736,
+    "name": "Void knight top",
+    "examine": "Torso armour from the order of the Void Knights.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_knight_top#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Void_knight_top_detail.png",
+    "stats": null
+  },
+  "Void knight robe": {
+    "id": 15738,
+    "name": "Void knight robe",
+    "examine": "Leg armour from the order of the Void Knights.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_knight_robe#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Void_knight_robe_detail.png",
+    "stats": null
+  },
+  "Void knight gloves": {
+    "id": 15741,
+    "name": "Void knight gloves",
+    "examine": "Gloves as used by the order of the Void Knights.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_knight_gloves#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Void_knight_gloves_detail.png",
+    "stats": null
+  },
+  "Fighter torso": {
+    "id": 15679,
+    "name": "Fighter torso",
+    "examine": "A Penance Fighter torso armour.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fighter_torso#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Fighter_torso_detail.png",
+    "stats": null
+  },
+  "Fire cape": {
+    "id": 18244,
+    "name": "Fire cape",
+    "examine": "A cape of fire.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fire_cape#Normal",
+    "icon_url": "https://oldschool.runescape.wiki/images/Fire_cape_detail.png",
+    "stats": null
+  },
+  "Imbued heart": {
+    "id": 20726,
+    "name": "Imbued heart",
+    "examine": "This heart holds a magical power within.",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Imbued_heart",
+    "icon_url": "https://oldschool.runescape.wiki/images/Imbued_heart_detail.png",
+    "stats": null
+  }
+}
