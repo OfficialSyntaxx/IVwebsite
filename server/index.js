@@ -113,9 +113,7 @@ app.put('/api/blog/:id', (req, res) => {
 
 app.delete('/api/blog/:id', (req, res) => {
     const { id } = req.params;
-    const password = req.headers['x-admin-password'] || req.body.password;
-
-
+    const password = req.headers['x-admin-password'] || (req.body && req.body.password);
 
     if (password !== ADMIN_PASSWORD) {
         console.error(`Invalid password attempt for delete: ${password}`);
@@ -460,6 +458,20 @@ app.post('/api/upload', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Local Web Server running on http://localhost:${PORT}`);
+// --- SERVE FRONTEND (Production) ---
+const DIST_DIR = path.join(__dirname, '../dist');
+if (fs.existsSync(DIST_DIR)) {
+    app.use(express.static(DIST_DIR));
+
+    // Handle SPA Routing (send index.html for non-API requests)
+    app.get('*', (req, res) => {
+        if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+            return res.status(404).json({ error: 'Endpoint not found' });
+        }
+        res.sendFile(path.join(DIST_DIR, 'index.html'));
+    });
+}
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Web Server running on http://0.0.0.0:${PORT}`);
 });

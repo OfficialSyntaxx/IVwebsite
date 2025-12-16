@@ -5,6 +5,8 @@ import { Lock, Save, AlertCircle, CheckCircle, Edit, Trash2, X, FileText, Users,
 import { Helmet } from 'react-helmet';
 import { useAuth } from '../context/AuthContext';
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+
 const Admin = () => {
     const { user } = useAuth();
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -42,11 +44,11 @@ const Admin = () => {
 
     // --- FETCHERS ---
     const fetchPosts = () => {
-        fetch('http://localhost:3002/api/blog').then(res => res.json()).then(setPosts).catch(console.error);
+        fetch(`${API_BASE}/api/blog`).then(res => res.json()).then(setPosts).catch(console.error);
     };
     const fetchApps = () => {
         const token = localStorage.getItem('token');
-        fetch('http://localhost:3002/staff-applications', {
+        fetch(`${API_BASE}/staff-applications`, {
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then(res => res.json())
@@ -58,7 +60,7 @@ const Admin = () => {
     };
     const fetchUsers = () => {
         const token = localStorage.getItem('token');
-        fetch('http://localhost:3002/api/users', {
+        fetch(`${API_BASE}/api/users`, {
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then(res => {
@@ -75,13 +77,13 @@ const Admin = () => {
             });
     };
     const fetchAnnouncement = () => {
-        fetch('http://localhost:3002/api/announcement/queue').then(res => res.json()).then(setAnnouncementQueue).catch(console.error);
+        fetch(`${API_BASE}/api/announcement/queue`).then(res => res.json()).then(setAnnouncementQueue).catch(console.error);
     };
 
     const handleAnnouncementDelete = async (id) => {
         if (!window.confirm("Delete this announcement?")) return;
         try {
-            await fetch(`http://localhost:3002/api/announcement/${id}`, { method: 'DELETE' });
+            await fetch(`${API_BASE}/api/announcement/${id}`, { method: 'DELETE' });
             fetchAnnouncement();
         } catch (err) { alert('Failed to delete announcement'); }
     };
@@ -106,7 +108,7 @@ const Admin = () => {
         e.preventDefault();
         setLoginStatus('loading');
         try {
-            const res = await fetch('http://localhost:3002/api/auth', {
+            const res = await fetch(`${API_BASE}/api/auth`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ password })
@@ -126,7 +128,7 @@ const Admin = () => {
             role: author === 'Syntaxx' ? 'Co owner & Wizard' : 'Owner & Mastermind',
             authorImage: author === 'Syntaxx' ? 'https://oldschool.runescape.wiki/images/Wise_Old_Man.png' : 'https://oldschool.runescape.wiki/images/Vannaka.png'
         };
-        const url = editingId ? `http://localhost:3002/api/blog/${editingId}` : 'http://localhost:3002/api/blog';
+        const url = editingId ? `${API_BASE}/api/blog/${editingId}` : `${API_BASE}/api/blog`;
         const method = editingId ? 'PUT' : 'POST';
 
         try {
@@ -147,7 +149,7 @@ const Admin = () => {
         if (!window.confirm("Delete this post?")) return;
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:3002/api/blog/${id}`, {
+            const res = await fetch(`${API_BASE}/api/blog/${id}`, {
                 method: 'DELETE', headers: {
                     'Content-Type': 'application/json',
                     'x-admin-password': password,
@@ -171,7 +173,7 @@ const Admin = () => {
     const handleAppUpdate = async (id, newStatus) => {
         try {
             const token = localStorage.getItem('token');
-            await fetch(`http://localhost:3002/staff-application/${id}`, {
+            await fetch(`${API_BASE}/staff-application/${id}`, {
                 method: 'PUT', headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
@@ -186,7 +188,7 @@ const Admin = () => {
         if (!window.confirm("Delete this application?")) return;
         try {
             const token = localStorage.getItem('token');
-            await fetch(`http://localhost:3002/staff-application/${id}`, {
+            await fetch(`${API_BASE}/staff-application/${id}`, {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${token}` }
             });
@@ -198,7 +200,7 @@ const Admin = () => {
         if (!window.confirm("Ban/Delete this user?")) return;
         try {
             const token = localStorage.getItem('token');
-            await fetch(`http://localhost:3002/api/users/${id}`, {
+            await fetch(`${API_BASE}/api/users/${id}`, {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${token}` }
             });
@@ -222,7 +224,7 @@ const Admin = () => {
             if (editForm.password) body.newPassword = editForm.password;
 
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:3002/api/users/${editingUser.id}`, {
+            const res = await fetch(`${API_BASE}/api/users/${editingUser.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -245,7 +247,7 @@ const Admin = () => {
         e.preventDefault();
         setStatus('loading');
         try {
-            await fetch('http://localhost:3002/api/announcement', {
+            await fetch(`${API_BASE}/api/announcement`, {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: announcementMsg, type: announcementType, duration: announcementDuration })
             });

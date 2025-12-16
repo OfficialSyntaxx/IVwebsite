@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import SectionTitle from '../components/SectionTitle';
+import { BLOG_POSTS as STATIC_POSTS } from '../data/blogPosts';
 import { ChevronRight, Calendar, User, Zap, Sword, Shield, Map as MapIcon, Trophy } from 'lucide-react';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
 
 const getIcon = (tags) => {
     if (tags.includes('Update') || tags.includes('System') || tags.includes('Patch')) return Zap;
@@ -14,13 +17,21 @@ const getIcon = (tags) => {
 };
 
 const DevBlog = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(STATIC_POSTS);
 
     useEffect(() => {
-        fetch('http://localhost:3002/api/blog')
-            .then(res => res.json())
-            .then(data => setPosts(data))
-            .catch(err => console.error("Failed to load blog posts:", err));
+        fetch(`${API_BASE}/api/blog`)
+            .then(res => {
+                if (!res.ok) throw new Error("API Offline");
+                return res.json();
+            })
+            .then(data => {
+                if (Array.isArray(data)) setPosts(data);
+            })
+            .catch(err => {
+                console.warn("DevBlog API unreachable, using static data.", err);
+                // Keep static posts as fallback
+            });
     }, []);
 
     return (

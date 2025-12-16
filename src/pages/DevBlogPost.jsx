@@ -1,14 +1,29 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { BLOG_POSTS } from '../data/blogPosts';
+import { BLOG_POSTS as STATIC_POSTS } from '../data/blogPosts';
 import { ArrowLeft, Calendar, User, Tag } from 'lucide-react';
-import ReactMarkdown from 'react-markdown'; // Assuming we might want this, but for now I'll use simple rendering since I didn't install it in the plan. I will fallback to standard whitespace rendering.
+import ReactMarkdown from 'react-markdown';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
 
 const DevBlogPost = () => {
-    const { slug } = useParams(); // URL param is still called slug in lookup, but effectively it's the ID
-    const post = BLOG_POSTS.find(p => p.id === slug);
+    const { slug } = useParams();
+    const [post, setPost] = useState(STATIC_POSTS.find(p => p.id === slug));
+
+    useEffect(() => {
+        // Try to fetch specific post from API
+        fetch(`${API_BASE}/api/blog`)
+            .then(res => res.json())
+            .then(data => {
+                if (Array.isArray(data)) {
+                    const found = data.find(p => p.id === slug);
+                    if (found) setPost(found);
+                }
+            })
+            .catch(err => console.warn("Using static fallback for post"));
+    }, [slug]);
 
     if (!post) {
         return <Navigate to="/blog" replace />;

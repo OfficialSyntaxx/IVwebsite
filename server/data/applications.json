@@ -1,34 +1,5 @@
 [
   {
-    "discord": "VerifyUser#9999",
-    "age": "99",
-    "experience": "Final system check",
-    "why": "Auto-start verification",
-    "scenario": "It works!",
-    "id": 1765492162075,
-    "timestamp": "2025-12-11T22:29:22.075Z",
-    "status": "Pending"
-  },
-  {
-    "discord": "VerifyUser#9999VerifyUser#9999",
-    "age": "99",
-    "experience": "Final system check",
-    "why": "Auto-start verification",
-    "scenario": "It works!",
-    "id": 1765492675244,
-    "timestamp": "2025-12-11T22:37:55.244Z"
-  },
-  {
-    "discord": "12",
-    "age": "12",
-    "experience": "12",
-    "why": "12",
-    "scenario": "12",
-    "id": 1765761773623,
-    "timestamp": "2025-12-15T01:22:53.623Z",
-    "status": "Pending"
-  },
-  {
     "discord": "Testing 2025",
     "age": "121",
     "experience": "12",
