@@ -1,12 +1,21 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Activity, Menu, X, Map as MapIcon, ChevronDown } from 'lucide-react';
+import { Activity, Menu, X, Map as MapIcon, ChevronDown, User, LogOut } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import LoginModal from './LoginModal';
+import RegisterModal from './RegisterModal';
 
-const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setRulesOpen }) => {
+const Layout = ({ hudOpen, setHudOpen, worldData, setMapOpen, setRulesOpen }) => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
+
+    // Modals
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+
+    const { user, logout } = useAuth();
 
     // Check scroll for navbar styling
     useEffect(() => {
@@ -20,8 +29,22 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
         setMobileMenuOpen(false);
     }, [location]);
 
+    const openLogin = () => { setIsLoginOpen(true); setIsRegisterOpen(false); };
+    const openRegister = () => { setIsRegisterOpen(true); setIsLoginOpen(false); };
+
     return (
         <div className="flex flex-col min-h-screen">
+            <LoginModal
+                isOpen={isLoginOpen}
+                onClose={() => setIsLoginOpen(false)}
+                onSwitchToRegister={openRegister}
+            />
+            <RegisterModal
+                isOpen={isRegisterOpen}
+                onClose={() => setIsRegisterOpen(false)}
+                onSwitchToLogin={openLogin}
+            />
+
             {/* Top Navigation */}
             <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${scrolled ? 'bg-slate-950/90 backdrop-blur border-slate-800 py-3' : 'bg-transparent border-transparent py-6'} pr-0 md:pr-80`}>
                 <div className="container mx-auto px-6 flex items-center justify-between">
@@ -29,9 +52,9 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                     {/* Brand */}
                     <div className="flex items-center gap-3">
                         <NavLink to="/" className="flex items-center gap-3 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                            <img src="/logo_iv_final.png" alt="IronVeil" className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(8,145,178,0.3)]" />
+                            <img src="/logo_iv_final.png" alt="Iron-Veil" className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(8,145,178,0.3)]" />
                             <div className="hidden sm:block">
-                                <span className="block text-2xl font-serif font-bold text-white tracking-widest leading-none">IRONVEIL</span>
+                                <span className="block text-2xl font-serif font-bold text-white tracking-widest leading-none">IRON-VEIL</span>
                                 <span className="block text-[10px] text-cyan-400 font-mono tracking-[0.3em] uppercase leading-none opacity-80">Forged in the Void</span>
                             </div>
                         </NavLink>
@@ -79,22 +102,60 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                                         Staff Application <span className="opacity-0 group-hover/item:opacity-100 transition-opacity text-green-500">→</span>
                                     </NavLink>
                                     <div className="h-px bg-slate-800 my-1 mx-2"></div>
-                                    <a href="https://discord.gg/ironveil" target="_blank" rel="noreferrer" className="px-4 py-3 hover:bg-[#5865F2]/20 text-left transition-colors text-slate-400 hover:text-[#5865F2] flex items-center justify-between group/item">
+                                    <a href="https://discord.gg/iron-veil" target="_blank" rel="noreferrer" className="px-4 py-3 hover:bg-[#5865F2]/20 text-left transition-colors text-slate-400 hover:text-[#5865F2] flex items-center justify-between group/item">
                                         Discord <span className="opacity-0 group-hover/item:opacity-100 transition-opacity">↗</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
+                        {/* Admin Link */}
+                        {user && (user.role === 'Owner' || user.username.toLowerCase() === 'syntaxx' || user.username.toLowerCase() === 'cranked') && (
+                            <NavLink to="/admin" className={({ isActive }) => `hover:text-red-500 transition-colors relative group ${isActive ? 'text-red-500' : ''}`}>
+                                Admin
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all group-hover:w-full"></span>
+                            </NavLink>
+                        )}
+
                         <NavLink to="/vote" className={({ isActive }) => `hover:text-white transition-colors relative group ${isActive ? 'text-white' : ''}`}>
                             Vote
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all group-hover:w-full"></span>
                         </NavLink>
 
-                        <button onClick={() => setStoreOpen(true)} className="hover:text-orange-400 transition-colors relative group text-orange-500/80">
+                        <NavLink to="/store" className={({ isActive }) => `hover:text-orange-400 transition-colors relative group ${isActive ? 'text-orange-400' : 'text-orange-500/80'}`}>
                             Store
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
-                        </button>
+                        </NavLink>
+
+                        <div className="h-4 w-px bg-slate-800"></div>
+
+                        {/* AUTHENTICATION */}
+                        {user ? (
+                            <div className="relative group/user h-full flex items-center">
+                                <button className="hover:text-cyan-400 transition-colors flex items-center gap-2 cursor-default py-2">
+                                    <User size={16} />
+                                    {user.username}
+                                    <ChevronDown size={14} className="group-hover/user:rotate-180 transition-transform duration-300" />
+                                </button>
+                                <div className="absolute top-full right-0 pt-2 opacity-0 invisible group-hover/user:opacity-100 group-hover/user:visible transition-all duration-300 transform group-hover/user:translate-y-0 translate-y-2 w-40">
+                                    <div className="bg-slate-950/95 backdrop-blur border border-slate-700/50 rounded-lg shadow-xl overflow-hidden flex flex-col py-1">
+                                        <NavLink to="/profile" className="px-4 py-3 hover:bg-slate-800 text-left transition-colors flex items-center justify-between group/item text-slate-400 hover:text-white">
+                                            My Profile <User size={14} />
+                                        </NavLink>
+                                        <div className="h-px bg-slate-800 my-1 mx-2"></div>
+                                        <button onClick={logout} className="px-4 py-3 hover:bg-red-900/20 text-left transition-colors flex items-center justify-between group/item text-slate-400 hover:text-red-400">
+                                            Logout <LogOut size={14} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="flex items-center gap-4">
+                                <button onClick={openLogin} className="hover:text-white transition-colors">Login</button>
+                                <button onClick={openRegister} className="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-1.5 rounded text-xs font-bold transition-all">Register</button>
+                            </div>
+                        )}
+
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -106,17 +167,32 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                 {/* Mobile Menu Overlay */}
                 {mobileMenuOpen && (
                     <div className="md:hidden absolute top-full left-0 w-full bg-slate-950 border-b border-slate-800 p-6 flex flex-col gap-4 text-center z-50 shadow-xl">
+                        {user ? (
+                            <div className="border-b border-slate-800 pb-4 mb-2">
+                                <NavLink to="/profile" className="block text-cyan-400 font-bold mb-2">My Account ({user.username})</NavLink>
+                                <button onClick={logout} className="text-red-400 font-bold uppercase tracking-wider py-2">Logout</button>
+                            </div>
+                        ) : (
+                            <div className="border-b border-slate-800 pb-4 mb-2 flex flex-col gap-2">
+                                <button onClick={openLogin} className="text-white font-bold uppercase tracking-wider py-2">Login</button>
+                                <button onClick={openRegister} className="text-cyan-400 font-bold uppercase tracking-wider py-2">Register</button>
+                            </div>
+                        )}
+
                         <span className="text-slate-500 text-xs font-bold uppercase tracking-widest border-b border-slate-800 pb-2 mb-2">Community</span>
                         <NavLink to="/wiki" className="text-slate-300 font-bold uppercase tracking-wider py-2">Wiki</NavLink>
                         <NavLink to="/blog" className="text-slate-300 font-bold uppercase tracking-wider py-2">Blog</NavLink>
                         <NavLink to="/team" className="text-slate-300 font-bold uppercase tracking-wider py-2">Team</NavLink>
                         <NavLink to="/hall-of-legends" className="text-yellow-500 font-bold uppercase tracking-wider py-2">Hall of Legends</NavLink>
-                        <a href="https://discord.gg/ironveil" className="text-slate-300 font-bold uppercase tracking-wider py-2">Discord</a>
+                        <a href="https://discord.gg/iron-veil" className="text-slate-300 font-bold uppercase tracking-wider py-2">Discord</a>
 
                         <div className="h-px bg-slate-800 w-1/2 mx-auto my-2"></div>
 
+                        {user && (user.role === 'Owner' || user.username.toLowerCase() === 'syntaxx' || user.username.toLowerCase() === 'cranked') && (
+                            <NavLink to="/admin" className="text-red-500 font-bold uppercase tracking-wider py-2">Admin Panel</NavLink>
+                        )}
                         <NavLink to="/vote" className="text-slate-300 font-bold uppercase tracking-wider py-2">Vote</NavLink>
-                        <button onClick={() => setStoreOpen(true)} className="text-orange-400 font-bold uppercase tracking-wider py-2">Store</button>
+                        <NavLink to="/store" className="text-orange-400 font-bold uppercase tracking-wider py-2">Store</NavLink>
                     </div>
                 )}
             </nav>
@@ -131,14 +207,14 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-4 gap-8">
                         <div className="col-span-1 md:col-span-2">
-                            <h3 className="text-2xl font-serif font-bold text-white mb-4">IRONVEIL</h3>
+                            <h3 className="text-2xl font-serif font-bold text-white mb-4">IRON-VEIL</h3>
                             <p className="text-slate-500 max-w-sm">The next generation of RSPS. A fully integrated web and game experience built for the modern player.</p>
                         </div>
                         <div>
                             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Community</h4>
                             <ul className="space-y-2 text-slate-400 text-sm">
                                 <li><NavLink to="/team" className="hover:text-cyan-400">Meet the Team</NavLink></li>
-                                <li><a href="https://discord.gg/ironveil" className="hover:text-cyan-400">Discord</a></li>
+                                <li><a href="https://discord.gg/iron-veil" className="hover:text-cyan-400">Discord</a></li>
                                 <li><NavLink to="/wiki" className="hover:text-cyan-400">Wiki</NavLink></li>
                                 <li><NavLink to="/blog" className="hover:text-cyan-400">Dev Blog</NavLink></li>
                                 <li><NavLink to="/hall-of-legends" className="hover:text-yellow-500">Hall of Legends</NavLink></li>
@@ -154,7 +230,7 @@ const Layout = ({ hudOpen, setHudOpen, worldData, setStoreOpen, setMapOpen, setR
                         </div>
                     </div>
                     <div className="mt-12 pt-8 border-t border-slate-900 text-center">
-                        <p className="text-slate-600 text-xs mb-4">&copy; 2025 IronVeil. Not affiliated with Jagex Ltd. RuneScape is a registered trademark of Jagex.</p>
+                        <p className="text-slate-600 text-xs mb-4">&copy; 2025 Iron-Veil. Not affiliated with Jagex Ltd. RuneScape is a registered trademark of Jagex.</p>
                         <div className="flex items-center justify-center gap-2 text-sm font-bold tracking-wider">
                             <span className="text-slate-600">Made by</span>
                             <span className="relative group cursor-pointer">

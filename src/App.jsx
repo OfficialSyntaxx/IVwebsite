@@ -12,14 +12,16 @@ import DevBlog from './pages/DevBlog';
 import DevBlogPost from './pages/DevBlogPost';
 import StaffApplication from './pages/StaffApplication';
 import HallOfLegends from './pages/HallOfLegends';
+import Admin from './pages/Admin';
+import Store from './pages/Store';
+import Profile from './pages/Profile';
 
-// Component Imports
 // Component Imports
 import Layout from './components/Layout';
 import LiveHUD from './components/LiveHUD';
 import ParallaxBackground from './components/ParallaxBackground';
 import ScrollToTop from './components/ScrollToTop';
-import { StoreModal, CollectionLogModal, WorldMapOverlay, PatchNoteModal, RulesModal } from './components/Modals';
+import { CollectionLogModal, WorldMapOverlay, PatchNoteModal, RulesModal } from './components/Modals';
 
 // Local Data
 import LOCAL_COLLECTION_LOG from './data/collectionLog.json';
@@ -28,7 +30,6 @@ export default function App() {
     // === GLOBAL STATE ===
     const [hudOpen, setHudOpen] = useState(false);
     const [mapOpen, setMapOpen] = useState(false);
-    const [storeOpen, setStoreOpen] = useState(false);
     const [rulesOpen, setRulesOpen] = useState(false);
     const [logOpen, setLogOpen] = useState(false);
     const [selectedPatchNote, setSelectedPatchNote] = useState(null);
@@ -131,7 +132,6 @@ export default function App() {
                         hotspots={MOCK_WORLD_STATE.hotspots}
                     />
 
-                    <StoreModal isOpen={storeOpen} onClose={() => setStoreOpen(false)} />
                     <RulesModal isOpen={rulesOpen} onClose={() => setRulesOpen(false)} />
                     <PatchNoteModal item={selectedPatchNote} onClose={() => setSelectedPatchNote(null)} />
                     <CollectionLogModal isOpen={logOpen} onClose={() => setLogOpen(false)} logData={collectionLogData} />
@@ -157,7 +157,6 @@ export default function App() {
                                     hudOpen={hudOpen}
                                     setHudOpen={setHudOpen}
                                     worldData={worldData}
-                                    setStoreOpen={setStoreOpen}
                                     setMapOpen={setMapOpen}
                                     setRulesOpen={setRulesOpen}
                                 />
@@ -172,10 +171,13 @@ export default function App() {
                                 />
                             } />
                             <Route path="/wiki" element={<Wiki />} />
+                            <Route path="/store" element={<Store />} />
                             <Route path="/vote" element={<Vote />} />
                             <Route path="/team" element={<MeetTheTeam />} />
                             <Route path="/blog" element={<DevBlog />} />
                             <Route path="/blog/:slug" element={<DevBlogPost />} />
+                            <Route path="/admin" element={<Admin />} />
+                            <Route path="/profile" element={<Profile />} />
                             <Route path="/staff-application" element={<StaffApplication />} />
                             <Route path="/hall-of-legends" element={<HallOfLegends />} />
                         </Route>

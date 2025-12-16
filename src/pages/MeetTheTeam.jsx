@@ -43,7 +43,7 @@ const MeetTheTeam = () => {
         <div className="min-h-screen pt-32 pb-20 container mx-auto px-6 relative z-20 animate-in fade-in duration-1000">
             <SectionTitle subtitle>Meet The Team</SectionTitle>
             <p className="text-slate-400 text-lg mb-12 max-w-2xl">
-                IronVeil is brought to you by a passionate team of veterans dedicated to preserving the golden era of RSPS while pushing boundaries with modern tech.
+                Iron-Veil is brought to you by a passionate team of veterans dedicated to preserving the golden era of RSPS while pushing boundaries with modern tech.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -79,7 +79,7 @@ const MeetTheTeam = () => {
                 <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-12 max-w-3xl mx-auto">
                     <h3 className="text-2xl font-bold text-white mb-4">Want to join the team?</h3>
                     <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-                        We are always looking for talented individuals to help us build the future of IronVeil.
+                        We are always looking for talented individuals to help us build the future of Iron-Veil.
                         If you have experience in development, community management, or game design, we want to hear from you.
                     </p>
                     <a

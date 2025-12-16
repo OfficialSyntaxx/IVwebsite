@@ -17,7 +17,7 @@ const DevBlogPost = () => {
     return (
         <div className="min-h-screen pt-32 pb-20 container mx-auto px-6 relative z-20 animate-in fade-in duration-500">
             <Helmet>
-                <title>{post.title} - IronVeil</title>
+                <title>{post.title} - Iron-Veil</title>
                 <meta name="description" content={post.excerpt} />
             </Helmet>
 
@@ -49,7 +49,7 @@ const DevBlogPost = () => {
                             )}
                         </div>
                         <div>
-                            <div className="text-white font-bold text-sm">{post.author || "IronVeil Team"}</div>
+                            <div className="text-white font-bold text-sm">{post.author || "Iron-Veil Team"}</div>
                             <div className="text-slate-500 text-xs">{post.role || "Developer"}</div>
                         </div>
                     </div>

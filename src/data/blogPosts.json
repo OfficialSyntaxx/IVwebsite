@@ -1,0 +1,70 @@
+[
+    {
+        "id": "update-1765854537750",
+        "date": "2025-12-16",
+        "title": "Sec Test",
+        "content": "Test"
+    },
+    {
+        "id": "update-1765852650338",
+        "date": "2025-12-16",
+        "title": "Sec Test",
+        "content": "Test"
+    },
+    {
+        "id": "update-12-11",
+        "title": "Staff Application System Live",
+        "date": "2025-12-11",
+        "author": "Syntaxx",
+        "role": "Co owner & Wizard",
+        "authorImage": "https://oldschool.runescape.wiki/images/Wise_Old_Man.png",
+        "excerpt": "We've overhauled the staff application process with a new integrated form and local storage backend.",
+        "content": "\n# Staff Applications Now Open\n\nWe are excited to announce that the new Staff Application system is live! You can now apply directly through the website without needing to join the Discord first.\n\n## Changes\n- **Integrated Form**: Apply directly on the site.\n- **Secure Backend**: Applications are processed securely and stored for admin review.\n- **Streamlined Process**: No more Google Forms.\n\n## How to Apply\nNavigate to the \"Community\" tab and select \"Apply for Staff\". Good luck!\n        ",
+        "tags": [
+            "Website",
+            "Community"
+        ]
+    },
+    {
+        "id": "update-12-08",
+        "title": "Wilderness Events & Hotspots",
+        "date": "2025-12-08",
+        "author": "Cranked",
+        "role": "Owner & Mastermind",
+        "authorImage": "https://oldschool.runescape.wiki/images/Vannaka.png",
+        "excerpt": "New hourly events in the Wilderness to heat up the action. Get ready for blood!",
+        "content": "\n# Wilderness Flash Events\n\nThe Wilderness just got deadlier. We've introduced a new system of rotating hotspots and flash events.\n\n## Features\n- **Hourly Hotspots**: 2x drops and XP in designated zones.\n- **Flash Events**: Sudden boss spawns or loot chest drops.\n- **Bounty Hunter**: Target system improvements.\n\n## Check the \"Network\" tab to see active events!\n        ",
+        "tags": [
+            "Update",
+            "PvP"
+        ]
+    },
+    {
+        "id": "update-12-05",
+        "title": "Raids 2: Theatre of Blood",
+        "date": "2025-12-05",
+        "author": "Cranked",
+        "role": "Owner & Mastermind",
+        "authorImage": "https://oldschool.runescape.wiki/images/Vannaka.png",
+        "excerpt": "Enter the theatre. Face Verzik Vitur. Claim your glory.",
+        "content": "\n# Theatre of Blood Released\n\nThe sanguinary challenges of the Theatre of Blood await. Gather your team and face the toughest challenge in Gielinor.\n\n## Bosses\n- Maiden of Sugadinti\n- Pestilent Bloat\n- Nylocas Vasilias\n- Sotetseg\n- Xarpus\n- Verzik Vitur\n\nGood luck, adventurers. You'll need it.\n        ",
+        "tags": [
+            "Update",
+            "PvM"
+        ]
+    },
+    {
+        "id": "update-12-01",
+        "title": "Winter Update: The Foundation",
+        "date": "2025-12-01",
+        "author": "Syntaxx",
+        "role": "Co owner & Wizard",
+        "authorImage": "https://oldschool.runescape.wiki/images/Wise_Old_Man.png",
+        "excerpt": "Laying the groundwork for the future of Iron-Veil. Stability fixes and core improvements.",
+        "content": "\n# The Foundation Update\n\nThis update focuses on stability, server performance, and laying the groundwork for future content like Raids and Wilderness events.\n\n## Patch Notes\n- **Server**: Optimized tick processing for smoother gameplay.\n- **Client**: Fixed rendering issues on high-DPI screens.\n- **Gameplay**: Adjusted drop tables for Slayer monsters.\n\nStay tuned for more updates throughout December!\n        ",
+        "tags": [
+            "System",
+            "Patch"
+        ]
+    }
+]

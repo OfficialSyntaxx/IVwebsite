@@ -328,7 +328,7 @@ export const PatchNoteModal = ({ item, onClose }) => {
 
                 <div className="prose prose-invert prose-cyan max-w-none">
                     <p className="text-lg text-slate-300 leading-relaxed mb-4">
-                        We are excited to announce the release of <strong>{item.title}</strong>! This update brings significant changes to the world of IronVeil.
+                        We are excited to announce the release of <strong>{item.title}</strong>! This update brings significant changes to the world of Iron-Veil.
                     </p>
                     <h3 className="text-xl font-bold text-white mb-2">Key Highlights</h3>
                     <ul className="list-disc list-inside text-slate-400 space-y-2 mb-4">
@@ -358,7 +358,7 @@ export const RulesModal = ({ isOpen, onClose }) => {
         { title: "Real World Trading", desc: "Buying or selling in-game wealth for real currency is a bannable offense." },
         { title: "Bug Abuse", desc: "Knowingly exploiting bugs for gain will result in a ban. Report them immediately." },
         { title: "Scamming", desc: "Deceiving players for financial gain is not tolerated. Trust trades are at your own risk." },
-        { title: "Staff Impersonation", desc: "Do not pretend to be IronVeil staff. Mod accounts always have a crown icon." },
+        { title: "Staff Impersonation", desc: "Do not pretend to be Iron-Veil staff. Mod accounts always have a crown icon." },
     ];
 
     return (

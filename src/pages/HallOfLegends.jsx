@@ -146,7 +146,7 @@ export default function HallOfLegends() {
                     </span>
                 </h1>
                 <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Honoring the elite champions of IronVeil. These players have etched their names into history through unmatched skill, dedication, and power.
+                    Honoring the elite champions of Iron-Veil. These players have etched their names into history through unmatched skill, dedication, and power.
                 </p>
             </div>
 

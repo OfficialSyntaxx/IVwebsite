@@ -1,7 +1,7 @@
 
 export const MOCK_WORLD_STATE = {
     meta: {
-        serverName: "IronVeil",
+        serverName: "Iron-Veil",
         status: "ONLINE",
         uptime: "4d 12h 30m",
         playersOnline: 432,
@@ -61,7 +61,7 @@ export const STAFF = [
         name: "Cranked",
         role: "Owner & Mastermind",
         image: "https://oldschool.runescape.wiki/images/Vannaka.png",
-        desc: "The visionary force driving IronVeil forward. Master of strategy, game health, and keeping the wilderness dangerous.",
+        desc: "The visionary force driving Iron-Veil forward. Master of strategy, game health, and keeping the wilderness dangerous.",
         skills: ["Project Management", "Game Design", "Economy Balancing", "Wilderness Logic"]
     },
     {

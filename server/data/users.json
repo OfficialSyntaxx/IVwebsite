@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1765768464724,
+    "username": "TestPlayerAuth",
+    "email": "auth@test.com",
+    "discord": "",
+    "password": "$2b$10$wb5r/8ItNkMFfrY1gTqxbejbtLK.c1Lc8qWMvrPU59BfAkFj3sgFO",
+    "joined": "2025-12-15T03:14:24.724Z",
+    "role": "User"
+  },
+  {
+    "id": 1765768804410,
+    "username": "Syntaxx",
+    "email": "Syntaxxrsps@gmail.com",
+    "discord": "Syntaxx",
+    "password": "$2b$10$ugT0qH6YyWYlvobPHHJMAuD1.yR28jbDtiB3YPPKd2R22svpARZcy",
+    "joined": "2025-12-15T03:20:04.410Z",
+    "role": "Moderator",
+    "avatar": "https://oldschool.runescape.wiki/images/Helm_of_neitiznot.png"
+  },
+  {
+    "id": 1765771537531,
+    "username": "Test",
+    "email": "theofficialsyntaxx@gmail.com",
+    "discord": "",
+    "password": "$2b$10$rBC0TzqkZIKCWgloKK7JMOVu1OnHB.9pgxyMN63HVSLgfoiqEdAmm",
+    "joined": "2025-12-15T04:05:37.531Z",
+    "role": "Admin"
+  }
+]

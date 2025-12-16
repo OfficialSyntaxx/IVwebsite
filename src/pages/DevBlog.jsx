@@ -1,9 +1,8 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import SectionTitle from '../components/SectionTitle';
-import { BLOG_POSTS } from '../data/blogPosts';
 import { ChevronRight, Calendar, User, Zap, Sword, Shield, Map as MapIcon, Trophy } from 'lucide-react';
 
 const getIcon = (tags) => {
@@ -15,11 +14,20 @@ const getIcon = (tags) => {
 };
 
 const DevBlog = () => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3002/api/blog')
+            .then(res => res.json())
+            .then(data => setPosts(data))
+            .catch(err => console.error("Failed to load blog posts:", err));
+    }, []);
+
     return (
         <div className="min-h-screen pt-32 pb-20 container mx-auto px-6 relative z-20 animate-in fade-in duration-500">
             <Helmet>
-                <title>Dev Blog - IronVeil</title>
-                <meta name="description" content="Stay up to date with the latest updates, patch notes, and developer insights for IronVeil." />
+                <title>Dev Blog - Iron-Veil</title>
+                <meta name="description" content="Stay up to date with the latest updates, patch notes, and developer insights for Iron-Veil." />
             </Helmet>
 
             <SectionTitle subtitle>Developer Blog</SectionTitle>
@@ -28,7 +36,7 @@ const DevBlog = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {BLOG_POSTS.map((post) => (
+                {posts.map((post) => (
                     <Link
                         key={post.id}
                         to={`/blog/${post.id}`}
@@ -38,11 +46,11 @@ const DevBlog = () => {
                         <div className="h-48 bg-slate-950 relative flex items-center justify-center overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-purple-900/10"></div>
                             {(() => {
-                                const Icon = getIcon(post.tags);
+                                const Icon = getIcon(post.tags || []);
                                 return <Icon size={64} className="text-slate-700 group-hover:text-cyan-500/50 transition-colors duration-500 transform group-hover:scale-110" />;
                             })()}
                             <div className="absolute top-4 left-4 flex gap-2">
-                                {post.tags.map(tag => (
+                                {(post.tags || []).map(tag => (
                                     <span key={tag} className="bg-black/60 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-cyan-400 border border-cyan-500/20">
                                         {tag}
                                     </span>
@@ -67,9 +75,11 @@ const DevBlog = () => {
                                         ) : (
                                             <User size={12} />
                                         )}
-                                        <span className="flex items-center gap-1">
-                                            {post.author || "IronVeil Team"}
-                                            {post.role && <span className="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-400">{post.role}</span>}
+                                        <span className="flex flex-col">
+                                            <span className="truncate max-w-[80px] md:max-w-[120px] font-bold text-slate-300">
+                                                {post.author || "Iron-Veil Team"}
+                                            </span>
+                                            {post.role && <span className="text-[9px] bg-slate-800/80 px-1.5 py-0.5 rounded text-slate-400 truncate max-w-[100px] w-fit mt-0.5">{post.role}</span>}
                                         </span>
                                     </span>
                                 </div>

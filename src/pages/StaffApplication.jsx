@@ -52,7 +52,7 @@ const StaffApplication = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-white mb-4">Application Received</h2>
                     <p className="text-slate-400 text-lg mb-8">
-                        Thank you for your interest in joining the IronVeil staff team.
+                        Thank you for your interest in joining the Iron-Veil staff team.
                         We have received your application and will review it shortly.
                         If you are selected for an interview, we will contact you via Discord.
                     </p>
@@ -70,8 +70,8 @@ const StaffApplication = () => {
     return (
         <div className="min-h-screen pt-32 pb-20 container mx-auto px-6 relative z-20 animate-in fade-in duration-500">
             <Helmet>
-                <title>Staff Application - IronVeil</title>
-                <meta name="description" content="Apply to become a staff member at IronVeil." />
+                <title>Staff Application - Iron-Veil</title>
+                <meta name="description" content="Apply to become a staff member at Iron-Veil." />
             </Helmet>
 
             <div className="max-w-3xl mx-auto">

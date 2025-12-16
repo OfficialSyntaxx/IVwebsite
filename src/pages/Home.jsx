@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Zap, Trophy, Newspaper, ChevronRight, Map as MapIcon, Users, Shield, CheckCircle2, Info } from 'lucide-react';
 import InteractiveArmory from '../components/InteractiveArmory';
 import LootBeamSimulator from '../components/LootBeamSimulator';
@@ -18,6 +18,17 @@ const FeatureItem = ({ icon: Icon, title, desc }) => (
 );
 
 const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote }) => {
+    const [announcement, setAnnouncement] = useState(null);
+
+    useEffect(() => {
+        fetch('http://localhost:3002/api/announcement')
+            .then(res => res.json())
+            .then(data => {
+                if (data.message) setAnnouncement(data);
+            })
+            .catch(err => console.error("Failed to load announcement", err));
+    }, []);
+
     return (
         <>
             <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -51,11 +62,15 @@ const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote 
                 </div>
 
                 <div className="relative z-10 container mx-auto px-6 text-center pt-20 pb-32">
-                    <span className="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6 animate-bounce">Newly Released!</span>
+                    {announcement && announcement.message && (
+                        <span className={`inline-block py-1 px-3 rounded-full border text-xs font-bold uppercase tracking-widest mb-6 ${announcement.type === 'permanent' ? 'bg-red-900/80 border-red-700 text-red-300 animate-pulse' : 'bg-cyan-900/80 border-cyan-700 text-cyan-300 animate-bounce'}`}>
+                            {announcement.message}
+                        </span>
+                    )}
                     <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-2xl">
                         The Veil Has <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 animate-gradient-x">Lifted</span>
                     </h1>
-                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">Experience RuneScape like never before. A persistent, living world that connects directly to your browser.</p>
+                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">Iron-Veil: A new era of adventure. Persistent, immersive, and built for the modern legend.</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 font-bold rounded hover:bg-slate-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">Download Launcher</button>
                         <button onClick={() => setMapOpen(true)} className="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-600 text-white font-bold rounded hover:bg-slate-800 transition-all flex items-center justify-center gap-2"><MapIcon size={18} /> View World Map</button>
@@ -99,7 +114,7 @@ const Home = ({ collectionLogData, setLogOpen, setMapOpen, setSelectedPatchNote 
                         <div className="order-1 md:order-2">
                             <SectionTitle subtitle>Chasing The Beam</SectionTitle>
                             <p className="text-slate-400 text-lg mb-6 leading-relaxed">
-                                Nothing beats the dopamine rush of a purple light. On IronVeil, we've fine-tuned drop rates to be fair but rewarding.
+                                Nothing beats the dopamine rush of a purple light. On Iron-Veil, we've fine-tuned drop rates to be fair but rewarding.
                             </p>
                             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
                                 Test your luck right now. Our loot generation system is built on a transparent, true-random algorithm.

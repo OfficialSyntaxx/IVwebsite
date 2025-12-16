@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Scroll, Terminal, Map as MapIcon, HelpCircle, Sword, ChevronRight, Crown } from 'lucide-react';
-import { WIKI_TABS, GEAR_PROGRESSION, SKILLING_HOTSPOTS, CUSTOM_CONTENT } from '../data/wikiData';
+import { Scroll, Terminal, Map as MapIcon, HelpCircle, Sword, ChevronRight, Crown, Flame, Anchor } from 'lucide-react';
+import { WIKI_TABS, GEAR_PROGRESSION, SKILLING_HOTSPOTS, CUSTOM_CONTENT, DONATOR_BENEFITS } from '../data/wikiData';
 
 const Wiki = () => {
     const [activeTab, setActiveTab] = useState('general');
@@ -10,7 +10,7 @@ const Wiki = () => {
         <div className="pt-24 pb-12 container mx-auto px-6 min-h-screen">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">IronVeil <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Wiki</span></h1>
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Iron-Veil <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Wiki</span></h1>
                     <p className="text-slate-400 text-lg">Your essential guide to surviving the void.</p>
                 </div>
 
@@ -46,7 +46,7 @@ const Wiki = () => {
                                     <h2 className="text-3xl font-bold text-white">Getting Started</h2>
                                 </div>
                                 <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
-                                    <p>Welcome to IronVeil. Your journey begins at <strong className="text-white">Edgeville</strong>, the central hub for all activities.</p>
+                                    <p>Welcome to Iron-Veil. Your journey begins at <strong className="text-white">Edgeville</strong>, the central hub for all activities.</p>
                                     <ul className="list-disc pl-6 space-y-3">
                                         <li><strong className="text-cyan-400">Custom XP Rates:</strong> Select up to 100x XP rates or choose 1x for maximum drop rate bonuses!</li>
                                         <li><strong className="text-cyan-400">Starter Pack:</strong> Begin your journey with a combat starter pack.</li>
@@ -70,7 +70,6 @@ const Wiki = () => {
                                         { cmd: "::vote", desc: "Open the voting page" },
                                         { cmd: "::store", desc: "Open the donation store" },
                                         { cmd: "::discord", desc: "Join our community Discord" },
-                                        { cmd: "::max", desc: "Show a max hit dummy" },
                                     ].map((c, i) => (
                                         <div key={i} className="flex items-center justify-between bg-black/40 p-4 rounded border border-slate-800 hover:border-slate-600 transition-colors">
                                             <code className="text-cyan-400 font-mono font-bold text-lg">{c.cmd}</code>
@@ -200,6 +199,38 @@ const Wiki = () => {
                                     </div>
                                 );
                             })}
+                        </div>
+                    )}
+
+                    {/* === DONATOR BENEFITS === */}
+                    {activeTab === 'donator' && (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {DONATOR_BENEFITS.map((rank) => (
+                                <div key={rank.tier} className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+                                    <div className={`p-4 bg-gradient-to-r ${rank.color} relative overflow-hidden`}>
+                                        <div className="absolute right-0 top-0 opacity-20 transform translate-x-2 -translate-y-2">
+                                            <Crown size={64} />
+                                        </div>
+                                        <div className="relative z-10">
+                                            <div className="flex justify-between items-start mb-1">
+                                                <h2 className="text-2xl font-bold text-white shadow-sm">{rank.tier}</h2>
+                                                <span className="bg-white/20 px-2 py-1 rounded text-xs font-bold text-white uppercase tracking-wider">{rank.price}</span>
+                                            </div>
+                                            <div className="h-1 w-12 bg-white/50 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                    <div className="p-6">
+                                        <ul className="space-y-3">
+                                            {rank.benefits.map((benefit, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-slate-300 text-sm">
+                                                    <div className="min-w-[4px] h-[4px] mt-2 rounded-full bg-cyan-500"></div>
+                                                    <span>{benefit}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     )}
                 </div>

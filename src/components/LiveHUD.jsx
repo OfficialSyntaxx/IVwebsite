@@ -14,7 +14,7 @@ const LiveHUD = ({ isOpen, toggle, onOpenMap, data, uptimeMs, formatUptime }) =>
                 <div className="p-6 border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 relative">
                     <button onClick={toggle} className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"><X size={20} /></button>
                     <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xs font-bold text-cyan-500 uppercase tracking-[0.2em]">IronVeil Network</h3>
+                        <h3 className="text-xs font-bold text-cyan-500 uppercase tracking-[0.2em]">Iron-Veil Network</h3>
                         <span className="flex h-2 w-2 relative mr-6"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
                     </div>
                     <div className="flex items-end justify-between">

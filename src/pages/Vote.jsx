@@ -8,7 +8,7 @@ const Vote = () => {
         <div className="min-h-screen pt-32 pb-20 container mx-auto px-6 relative z-20 animate-in fade-in duration-500">
             <SectionTitle subtitle>Vote for Rewards</SectionTitle>
             <p className="text-slate-400 text-lg mb-12 max-w-2xl">
-                Voting helps IronVeil grow. As a thank you, you'll receive a Vote Box and GP for every vote cast. (Resets every 12 hours)
+                Voting helps Iron-Veil grow. As a thank you, you'll receive a Vote Box and GP for every vote cast. (Resets every 12 hours)
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
